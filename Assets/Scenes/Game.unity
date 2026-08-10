@@ -8806,6 +8806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625521166}
   - component: {fileID: 1625521165}
+  - component: {fileID: 1625521167}
   m_Layer: 0
   m_Name: SceneScope
   m_TagString: Untagged
@@ -8840,6 +8841,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625521167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625521164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3963ad9f9d184f469788d8e11c2450d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Items::Items.ItemsInstaller
+  _fieldSizeX: 7
+  _fieldSizeY: 9
+  _spawnerData: {fileID: 11400000, guid: d6f3f9c690370f04aa86e393afb6e5a6, type: 2}
+  _spawnerIndexX: 3
+  _spawnerIndexY: 4
 --- !u!224 &1626684345 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1079526206558649165, guid: e36215fc92099754a80e0fce7f621d93, type: 3}

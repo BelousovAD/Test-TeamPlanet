@@ -8,11 +8,13 @@ namespace Items
         [SerializeField][Min(1)] private int _fieldSizeX = 1;
         [SerializeField][Min(1)] private int _fieldSizeY = 1;
         [SerializeField] private ItemData _spawnerData;
+        [SerializeField][Min(0)] private int _spawnerIndexX;
+        [SerializeField][Min(0)] private int _spawnerIndexY;
         
         public void InstallBindings(ContainerBuilder builder)
         {
             Item[,] items = new Item[_fieldSizeY, _fieldSizeX];
-            items[0, 0] = new Item(_spawnerData);
+            items[_spawnerIndexY, _spawnerIndexX] = new Item(_spawnerData);
 
             builder.RegisterValue(new ItemArray(items));
         }
