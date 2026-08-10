@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Items
 {
-    [CreateAssetMenu(fileName = nameof(ItemData), menuName = nameof(Items) + nameof(ItemData))]
+    [CreateAssetMenu(fileName = nameof(ItemData), menuName = nameof(Items) + "/" + nameof(ItemData))]
     public class ItemData : ScriptableObject
     {
         [SerializeField] private ItemType _type;
