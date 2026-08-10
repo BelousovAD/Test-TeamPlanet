@@ -6,11 +6,14 @@ namespace Items
     [RequireComponent(typeof(Image))]
     internal class ItemView : MonoBehaviour
     {
-        private readonly Color Transparency = new Color(1f, 1f, 1f, 0f);
+        private readonly Color Transparency = new (1f, 1f, 1f, 0f);
         
         [SerializeField] private ItemProvider _provider;
 
         private Image _image;
+
+        private void Awake() =>
+            _image = GetComponent<Image>();
 
         private void OnEnable()
         {
