@@ -49,6 +49,13 @@ namespace Items
                 _items[sourceIndex.Item1, sourceIndex.Item2] = null;
                 ItemChanged?.Invoke(sourceIndex.Item1, sourceIndex.Item2);
             }
+            else
+            {
+                _items[targetIndex.Item1, targetIndex.Item2] = first;
+                _items[sourceIndex.Item1, sourceIndex.Item2] = second;
+                ItemChanged?.Invoke(targetIndex.Item1, targetIndex.Item2);
+                ItemChanged?.Invoke(sourceIndex.Item1, sourceIndex.Item2);
+            }
         }
 
         public bool TryAddItem(Item item)
