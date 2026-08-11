@@ -2,7 +2,7 @@ using System;
 
 namespace Items
 {
-    internal class ItemArray
+    public class ItemArray
     {
         private readonly Item[,] _items;
 
@@ -14,5 +14,10 @@ namespace Items
         public event Action<int, int> ItemChanged;
 
         public Item this[int y, int x] => _items[y, x];
+
+        public void Merge(Item first, Item second)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

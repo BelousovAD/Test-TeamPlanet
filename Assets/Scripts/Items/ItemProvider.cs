@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Items
 {
-    internal class ItemProvider : MonoBehaviour
+    public class ItemProvider : MonoBehaviour
     {
         [SerializeField][Min(0)] private int _indexX;
         [SerializeField][Min(0)] private int _indexY;

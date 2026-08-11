@@ -6,9 +6,8 @@ namespace Items
     [RequireComponent(typeof(Image))]
     internal class ItemView : MonoBehaviour
     {
-        private readonly Color Transparency = new (1f, 1f, 1f, 0f);
-        
         [SerializeField] private ItemProvider _provider;
+        [SerializeField] private CanvasGroup _group;
 
         private Image _image;
 
@@ -26,8 +25,9 @@ namespace Items
 
         private void UpdateView()
         {
+            _group.blocksRaycasts = _provider.Item is not null;
+            _group.alpha = _provider.Item is not null ? 1f : 0f;
             _image.sprite = _provider.Item?.Sprite;
-            _image.color = _provider.Item is null ? Transparency : Color.white;
         }
     }
 }
