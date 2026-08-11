@@ -5577,6 +5577,7 @@ GameObject:
   - component: {fileID: 1625521166}
   - component: {fileID: 1625521165}
   - component: {fileID: 1625521167}
+  - component: {fileID: 1625521168}
   m_Layer: 0
   m_Name: SceneScope
   m_TagString: Untagged
@@ -5628,6 +5629,20 @@ MonoBehaviour:
   _spawnerData: {fileID: 11400000, guid: d6f3f9c690370f04aa86e393afb6e5a6, type: 2}
   _spawnerIndexX: 3
   _spawnerIndexY: 4
+--- !u!114 &1625521168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625521164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5583bf3c4f0144418ac9c589336966db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawn.SpawnInstaller
+  _spawnerDatas:
+  - {fileID: 11400000, guid: 79b0b96f5e25d2641a320bbe0cae7588, type: 2}
 --- !u!224 &1626684345 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1079526206558649165, guid: e36215fc92099754a80e0fce7f621d93, type: 3}

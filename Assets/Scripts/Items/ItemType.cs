@@ -2,7 +2,6 @@ namespace Items
 {
     public enum ItemType
     {
-        Spawner = 0,
-        Coin = 1,
+        Coin = 0,
     }
 }

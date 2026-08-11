@@ -9,15 +9,29 @@ namespace Items
         private readonly int _stateMax;
         private int _state;
 
-        public Item(ItemData data)
+        public Item(ItemData data, int state = 0)
         {
             _data = data;
             _stateMax = _data.Sprites.Count - 1;
+
+            if (state < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(state), "Must be non-negative");
+            }
+
+            if (state > _stateMax)
+            {
+                throw new ArgumentOutOfRangeException(nameof(state), $"Must be less than Max:{_stateMax}");
+            }
+
+            _state = state;
         }
 
         public event Action StateChanged;
 
         public ItemType Type => _data.Type;
+
+        public bool IsSpawner => _data.IsSpawner;
 
         public int State
         {

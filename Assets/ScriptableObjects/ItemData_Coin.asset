@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b095c04f71e943b3910008af85528ac3, type: 3}
-  m_Name: SpawnerData
+  m_Name: ItemData_Coin
   m_EditorClassIdentifier: Items::Items.ItemData
   _type: 0
+  _isSpawner: 0
   _sprites:
-  - {fileID: 21300000, guid: f38722228dc415b42a80469b736c288f, type: 3}
-  - {fileID: 21300000, guid: c0e54aba3f613474983bcec64dd3002a, type: 3}
-  - {fileID: 21300000, guid: cb11cdf43662dd24ba37eb6c15dd0c5d, type: 3}
-  - {fileID: 21300000, guid: 9881d8183be5fe44498a5154eae686e0, type: 3}
+  - {fileID: 21300000, guid: e7c61849a96a88c42854fda5a2077bc9, type: 3}
+  - {fileID: 21300000, guid: 9f81fda528df2ed4d88fb593fdf59877, type: 3}
+  - {fileID: 21300000, guid: d121139e626d0374a87e4c3b8068dc56, type: 3}
+  - {fileID: 21300000, guid: 1072f990ecb2c7b41949c85ce9f7519f, type: 3}

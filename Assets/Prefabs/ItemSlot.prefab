@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2774401217774166744}
   - component: {fileID: 1466247297841672982}
   - component: {fileID: 2242596358132612925}
+  - component: {fileID: 5237888866149651416}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
@@ -117,7 +118,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: DragAndDrop::DragAndDrop.DraggableItem
   _itemProvider: {fileID: 341511798817504523}
-  _sortingGroup: {fileID: 0}
+--- !u!114 &5237888866149651416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633492858045255311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c38a68c127469db1029eebf44fa789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawn.SpawnButton
+  _itemProvider: {fileID: 341511798817504523}
 --- !u!1 &2066954760282905034
 GameObject:
   m_ObjectHideFlags: 0
