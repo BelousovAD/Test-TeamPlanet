@@ -21,7 +21,7 @@ namespace Spawn
             
             if (item is not null && item.IsSpawner)
             {
-                _spawnCaller.Spawn(item.Type, item.State);
+                _spawnCaller.Spawn(item.Type, false, item.State);
             }
         }
     }

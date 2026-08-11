@@ -13,6 +13,8 @@ namespace Spawn
 
         public ItemType Type => _data.Type;
 
+        public bool IsSpawnerItem => _data.ItemData.IsSpawner;
+
         public void Initialize(ItemArray itemArray) =>
             _itemArray = itemArray;
 
