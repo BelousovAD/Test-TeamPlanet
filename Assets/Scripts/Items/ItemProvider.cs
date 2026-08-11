@@ -14,6 +14,8 @@ namespace Items
 
         public event Action ItemChanged;
 
+        public (int, int) Index => (_indexY, _indexX);
+
         public Item Item
         {
             get => _item;

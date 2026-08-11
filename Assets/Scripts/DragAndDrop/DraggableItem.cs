@@ -50,7 +50,7 @@ namespace DragAndDrop
             
             if (itemProvider is not null)
             {
-                _itemArray.Merge(_itemProvider.Item, itemProvider.Item);
+                _itemArray.Merge(_itemProvider.Index, itemProvider.Index);
             }
         }
     }
