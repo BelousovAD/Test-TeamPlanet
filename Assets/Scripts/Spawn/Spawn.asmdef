@@ -1,0 +1,18 @@
+{
+    "name": "Spawn",
+    "rootNamespace": "",
+    "references": [
+        "GUID:97fb0bd31abaf734a8f5ecc8c396bf7a",
+        "GUID:1530a967b84cfb44dbdd5e8a1989764f",
+        "GUID:4e0502a85406ffc45b65af8e7decfc4a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
