@@ -12,6 +12,12 @@ namespace Items
         public Item(ItemData data, int state = 0)
         {
             _data = data;
+
+            if (_data.Sprites.Count == 0)
+            {
+                throw new InvalidOperationException("Sprites count must be greater than 0");
+            }
+            
             _stateMax = _data.Sprites.Count - 1;
 
             if (state < 0)
