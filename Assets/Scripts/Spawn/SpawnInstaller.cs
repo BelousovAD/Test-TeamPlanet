@@ -8,9 +8,10 @@ namespace Spawn
 {
     internal class SpawnInstaller : MonoBehaviour, IInstaller
     {
+        private readonly List<Spawner> _spawners = new ();
+        
         [SerializeField] private List<SpawnerData> _spawnerDatas;
 
-        private readonly List<Spawner> _spawners = new ();
         private ContainerBuilder _builder;
         
         public void InstallBindings(ContainerBuilder builder)

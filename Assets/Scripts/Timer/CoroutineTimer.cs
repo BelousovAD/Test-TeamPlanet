@@ -8,10 +8,10 @@ namespace Timer
     {
         public const int Min = 0;
         private const int Second = 1;
+        private readonly WaitForSeconds _delay = new (Second);
 
         [SerializeField][Min(0)] private int _startTime;
         
-        private readonly WaitForSeconds _delay = new (Second);
         private Coroutine _coroutine;
         private int _time;
 
@@ -59,6 +59,7 @@ namespace Timer
                 Time--;
             }
 
+            _coroutine = null;
             Finished?.Invoke();
         }
     }
