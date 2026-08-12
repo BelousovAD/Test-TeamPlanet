@@ -24,7 +24,11 @@ namespace Items
         private void OnDisable()
         {
             _provider.ItemChanged -= UpdateSubscriptions;
-            UpdateSubscriptions();
+
+            if (_item is not null)
+            {
+                Unsubscribe();
+            }
         }
 
         private void UpdateSubscriptions()
