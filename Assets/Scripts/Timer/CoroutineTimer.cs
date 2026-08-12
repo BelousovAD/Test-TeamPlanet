@@ -16,7 +16,7 @@ namespace Timer
         private int _time;
 
         public event Action TimeChanged;
-        public event Action TimeIsUp;
+        public event Action Finished;
 
         public int Time
         {
@@ -59,7 +59,7 @@ namespace Timer
                 Time--;
             }
 
-            TimeIsUp?.Invoke();
+            Finished?.Invoke();
         }
     }
 }

@@ -17,10 +17,10 @@ namespace Spawn
             _spawnCaller = spawnCaller;
 
         private void OnEnable() =>
-            _timer.TimeIsUp += CreateSpawner;
+            _timer.Finished += CreateSpawner;
 
         private void OnDisable() =>
-            _timer.TimeIsUp -= CreateSpawner;
+            _timer.Finished -= CreateSpawner;
 
         private void CreateSpawner() =>
             _spawnCaller.Spawn(_type, true, 0);
