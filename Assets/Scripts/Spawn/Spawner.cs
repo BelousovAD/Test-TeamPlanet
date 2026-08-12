@@ -1,5 +1,6 @@
 using System;
 using Items;
+using UnityEngine;
 
 namespace Spawn
 {
@@ -28,7 +29,10 @@ namespace Spawn
             ChanceData chance = _data.Chances[spawnerState];
             int state = UnityEngine.Random.value > chance.Value ? chance.RightState : chance.LeftState;
 
-            _itemArray.TryAddItem(new Item(_data.ItemData, state));
+            if (_itemArray.TryAddItem(new Item(_data.ItemData, state)) == false)
+            {
+                Debug.Log("Area is full");
+            }
         }
     }
 }
