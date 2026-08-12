@@ -1,3 +1,4 @@
+using System;
 using Reflex.Core;
 using UnityEngine;
 
@@ -17,6 +18,12 @@ namespace Items
             items[_spawnerIndexY, _spawnerIndexX] = new Item(_spawnerData);
 
             builder.RegisterValue(new ItemArray(items));
+        }
+
+        private void OnValidate()
+        {
+            _spawnerIndexX = Mathf.Min(_spawnerIndexX, _fieldSizeX - 1);
+            _spawnerIndexY = Mathf.Min(_spawnerIndexY, _fieldSizeY - 1);
         }
     }
 }
