@@ -15,7 +15,7 @@ namespace Items
 
         public Item this[int y, int x] => _items[y, x];
 
-        public void Merge((int, int) sourceIndex, (int, int) targetIndex)
+        public void HandleCollision((int, int) sourceIndex, (int, int) targetIndex)
         {
             Item first = _items[sourceIndex.Item1, sourceIndex.Item2];
             Item second = _items[targetIndex.Item1, targetIndex.Item2];
@@ -32,10 +32,7 @@ namespace Items
 
             if (second is null)
             {
-                _items[targetIndex.Item1, targetIndex.Item2] = first;
-                _items[sourceIndex.Item1, sourceIndex.Item2] = null;
-                ItemChanged?.Invoke(targetIndex.Item1, targetIndex.Item2);
-                ItemChanged?.Invoke(sourceIndex.Item1, sourceIndex.Item2);
+                Swap(sourceIndex, targetIndex);
                 
                 return;
             }
@@ -51,11 +48,16 @@ namespace Items
             }
             else
             {
-                _items[targetIndex.Item1, targetIndex.Item2] = first;
-                _items[sourceIndex.Item1, sourceIndex.Item2] = second;
-                ItemChanged?.Invoke(targetIndex.Item1, targetIndex.Item2);
-                ItemChanged?.Invoke(sourceIndex.Item1, sourceIndex.Item2);
+                Swap(sourceIndex, targetIndex);
             }
+        }
+
+        private void Swap((int, int) sourceIndex, (int, int) targetIndex)
+        {
+            (_items[targetIndex.Item1, targetIndex.Item2], _items[sourceIndex.Item1, sourceIndex.Item2]) =
+                (_items[sourceIndex.Item1, sourceIndex.Item2], _items[targetIndex.Item1, targetIndex.Item2]);
+            ItemChanged?.Invoke(targetIndex.Item1, targetIndex.Item2);
+            ItemChanged?.Invoke(sourceIndex.Item1, sourceIndex.Item2);
         }
 
         public bool TryAddItem(Item item)
